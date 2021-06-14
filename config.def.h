@@ -19,7 +19,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "xft:Inconsolata Nerd Font Mono:style=Bold:pixelsize=14:antialias=true" /*"Liberation Mono:size=10"*/ };
+static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -72,7 +72,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "urxvt", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -115,7 +115,7 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioRaiseVolume,   spawn,  SHCMD("/usr/bin/pamixer -i 5;kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_MonBrightnessUp,    spawn,  SHCMD("/usr/bin/xbacklight -inc 5;kill -40 $(pidof dwmblocks)") },
 	{ 0, XF86XK_MonBrightnessDown,  spawn,  SHCMD("/usr/bin/xbacklight -dec 5;kill -40 $(pidof dwmblocks)") },
-	{ 0, XK_Print, 			spawn, 	SHCMD("scrot -e 'mv $f ~/Screenshots/'") },
+	{ 0, XK_Print, 			spawn, 	SHCMD("scrot -e 'mv $f ~/Pictures/Screenshots/'") },
     
 };
 
