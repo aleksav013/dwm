@@ -1,10 +1,10 @@
 /**
- * dwmconfig.h 
+ * dwmconfig.h
  * Hardware multimedia keys
  */
 /* Somewhere at the beginning of config.h include: */
 
-/* 
+/*
  You obviously need the X11 development package installed, but here is the upstream copy
  of this header if you can't bother using the contents of your own hard drive. ;-P
  https://cgit.freedesktop.org/xorg/proto/x11proto/tree/XF86keysym.h
@@ -120,7 +120,6 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioNext,		spawn, 	SHCMD("/usr/bin/mpc next") },
 	{ 0, XF86XK_Search, 		spawn, 	SHCMD("$BROWSER") },
 	{ 0, XK_Print, 			spawn, 	SHCMD("/usr/bin/scrot -e 'mv $f ~/Pictures/Screenshots/'") },
-    
 };
 
 /* button definitions */
