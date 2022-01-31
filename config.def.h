@@ -19,7 +19,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10:autohint=true:antialias=true", };
+static const char *fonts[]          = { "monospace:size=10:autohint=true:antialias=true" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -110,16 +110,17 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ 0, XF86XK_AudioLowerVolume,   spawn,  SHCMD("/usr/bin/pamixer -d 5;kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioMute,          spawn,  SHCMD("/usr/bin/pamixer -t;kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,   spawn,  SHCMD("/usr/bin/pamixer -i 5;kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_MonBrightnessUp,    spawn,  SHCMD("/usr/bin/xbacklight -inc 5;kill -40 $(pidof dwmblocks)") },
-	{ 0, XF86XK_MonBrightnessDown,  spawn,  SHCMD("/usr/bin/xbacklight -dec 5;kill -40 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioPrev,		spawn, 	SHCMD("/usr/bin/mpc prev") },
-	{ 0, XF86XK_AudioPlay,		spawn, 	SHCMD("/usr/bin/mpc toggle") },
-	{ 0, XF86XK_AudioNext,		spawn, 	SHCMD("/usr/bin/mpc next") },
-	{ 0, XF86XK_Search, 		spawn, 	SHCMD("$BROWSER") },
-	{ 0, XK_Print, 			spawn, 	SHCMD("/usr/bin/scrot -e 'mv $f ~/Pictures/Screenshots/'") },
+	{ 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("/usr/bin/pamixer -d 5;kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioMute,          spawn, SHCMD("/usr/bin/pamixer -t;kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("/usr/bin/pamixer -i 5;kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessUp,    spawn, SHCMD("/usr/bin/xbacklight -inc 5;kill -40 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("/usr/bin/xbacklight -dec 5;kill -40 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioPrev,		spawn, SHCMD("/usr/bin/mpc prev") },
+	{ 0, XF86XK_AudioPlay,		spawn, SHCMD("/usr/bin/mpc toggle") },
+	{ 0, XF86XK_AudioNext,		spawn, SHCMD("/usr/bin/mpc next") },
+	{ 0, XF86XK_Search, 		spawn, SHCMD("$BROWSER") },
+	{ 0, XK_Print,                  spawn, SHCMD("/usr/bin/maim | xclip -selection clipboard -t image/png; xclip -out -selection clipboard > ~/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png")},
+	{ ShiftMask, XK_Print,          spawn, SHCMD("/usr/bin/maim -su | xclip -selection clipboard -t image/png; xclip -out -selection clipboard > ~/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png")}
 };
 
 /* button definitions */
