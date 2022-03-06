@@ -19,8 +19,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10:autohint=true:antialias=true" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Inconsolata Nerd Font Mono:Style=Bold:pixelsize=16:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Inconsolata Nerd Font Mono:Style=Bold:pixelsize=16:antialias=true:autohint=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -119,7 +119,7 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioPlay,		spawn, SHCMD("/usr/bin/mpc toggle") },
 	{ 0, XF86XK_AudioNext,		spawn, SHCMD("/usr/bin/mpc next") },
 	{ 0, XF86XK_Search, 		spawn, SHCMD("$BROWSER") },
-	{ 0, XK_Print,                  spawn, SHCMD("/usr/bin/maim | xclip -selection clipboard -t image/png; xclip -out -selection clipboard > ~/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png")},
+	{ 0, XK_Print,                  spawn, SHCMD("/usr/bin/maim -u | xclip -selection clipboard -t image/png; xclip -out -selection clipboard > ~/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png")},
 	{ ShiftMask, XK_Print,          spawn, SHCMD("/usr/bin/maim -su | xclip -selection clipboard -t image/png; xclip -out -selection clipboard > ~/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png")}
 };
 
