@@ -125,9 +125,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("/usr/bin/pamixer -d 5;kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioMute,          spawn, SHCMD("/usr/bin/pamixer -t;kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("/usr/bin/pamixer -i 5;kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("/usr/bin/pamixer --allow-boost --set-limit 150 -d 5;kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioMute,          spawn, SHCMD("/usr/bin/pamixer --allow-boost --set-limit 150 -t;kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("/usr/bin/pamixer --allow-boost --set-limit 150 -i 5;kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_MonBrightnessUp,    spawn, SHCMD("/usr/bin/xbacklight -inc 5;kill -40 $(pidof dwmblocks)") },
 	{ 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("/usr/bin/xbacklight -dec 5;kill -40 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioPrev,		spawn, SHCMD("/usr/bin/mpc prev") },
