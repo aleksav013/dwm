@@ -21,8 +21,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:pixelsize=15:antialias=true:autohint=true" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Bold:pixelsize=15:antialias=true:autohint=true";
+static const char *fonts[]          = { "JetBrainsMono NFM:style=Bold:pixelsize=15:antialias=true:autohint=true" };
+static const char dmenufont[]       = "JetBrainsMono NFM:style=Bold:pixelsize=15:antialias=true:autohint=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -43,15 +43,16 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "ViberPC",   NULL,     NULL,           1 << 0,    0,          0,          -1,        -1 },
-	{ "discord",   NULL,     NULL,           1 << 0,    0,          0,          -1,        -1 },
-	{ "KeePassXC", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-//	{ "Bochs",     NULL,     NULL,           0,         0,          0,          -1,        -1 },
-	{ "IDA",       NULL,     NULL,           0,         0,          0,          -1,        -1 },
-	{ "St",        NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,        NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
-	{ NULL,        NULL,     "zaklopachess", 0,         0,          0,           1,        -1 }, /* marko */
+	/* class       instance  title           			tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "ViberPC",   NULL,     NULL,           			1 << 0,    0,          0,          -1,        -1 },
+	{ "discord",   NULL,     NULL,           			1 << 0,    0,          0,          -1,        -1 },
+	{ "KeePassXC", NULL,     NULL,           			1 << 8,    0,          0,          -1,        -1 },
+//	{ "Bochs",     NULL,     NULL,           			0,         0,          0,          -1,        -1 },
+	{ "IDA",       NULL,     NULL,           			0,         0,          0,          -1,        -1 },
+	{ "St",        NULL,     NULL,           			0,         0,          1,           0,        -1 },
+	{ NULL,        NULL,     "Event Tester",			0,         0,          0,           1,        -1 }, /* xev */
+	{ NULL,        NULL,     "zaklopachess",			0,         0,          0,           1,        -1 }, /* marko */
+	{ NULL,        NULL,     "Directional Audio Visualizer",	0,         0,          0,           1,        -1 }, /* marko */
 };
 
 /* layout(s) */
