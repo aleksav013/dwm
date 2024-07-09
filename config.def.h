@@ -48,6 +48,7 @@ static const Rule rules[] = {
 	{ "discord",   NULL,     NULL,           			1 << 0,    0,          0,          -1,        -1 },
 	{ "KeePassXC", NULL,     NULL,           			1 << 8,    0,          0,          -1,        -1 },
 //	{ "Bochs",     NULL,     NULL,           			0,         0,          0,          -1,        -1 },
+	{ NULL,        NULL,     "QEMU",         			0,         0,          0,          -1,        -1 },
 	{ "IDA",       NULL,     NULL,           			0,         0,          0,          -1,        -1 },
 	{ "St",        NULL,     NULL,           			0,         0,          1,           0,        -1 },
 	{ NULL,        NULL,     "Event Tester",			0,         0,          0,           1,        -1 }, /* xev */
